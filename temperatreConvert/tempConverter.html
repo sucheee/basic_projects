@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Override default browser styles for select options */
+        select {
+            appearance: none;
+            background-color: #4a5568;
+            color: #f7fafc;
+            border-radius: 0.375rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid #4a5568;
+            width: 100%;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        /* Override default browser styles for input */
+        input[type="number"] {
+            background-color: #4a5568;
+            color: #f7fafc;
+            border-radius: 0.375rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid #4a5568;
+            width: 100%;
+            font-size: 1rem;
+            outline: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col justify-center items-center">
+<div class="container mx-auto p-8 rounded-lg bg-gray-800 shadow-lg">
+    <h1 class="text-3xl font-bold text-center text-gray-100 mb-8">Temperature Converter</h1>
+    <!-- Temperature Converter Form -->
+    <div class="w-full">
+        <h2 class="text-xl font-semibold text-gray-100 mb-4">Enter Temperature</h2>
+        <!-- Select box for selecting the input temperature unit -->
+        <select id="fromValue" class="mb-4">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+        </select>
+        <!-- Input field for entering the temperature value -->
+        <input type="number" id="valueGiven" placeholder="Temperature" class="mb-4">
+        <!-- Select box for selecting the output temperature unit -->
+        <select id="toValue" class="mb-4">
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="celsius">Celsius</option>
+        </select>
+        <!-- Convert Button -->
+        <button id="convert" class="bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 focus:outline-none focus:bg-red-700 w-full mb-4">Convert</button>
+    </div>
+    <!-- Result Display -->
+    <div class="text-3xl font-bold text-gray-100 mt-6">Result: <span id="result" class="font-semibold">-</span></div>
+</div>
+<footer class=" py-4">
+    <div class="text-center text-white">
+        <p class="flex items-center justify-center">
+            Made with <i class="fas fa-heart text-red-500 mx-1"></i> by Alpha
+        </p>
+        <!-- Social Icons -->
+        <div class="mt-4 flex items-center justify-center space-x-4">
+            <!-- GitHub Icon -->
+            <a href="https://github.com/sucheee" class="text-gray-300 hover:text-gray-200 transition-colors duration-300">
+                <i class="fab fa-github text-xl"></i>
+            </a>
+            <!-- Instagram Icon with Glassy Effect -->
+            <a href="https://instagram.com/suchee_3" class="relative">
+                <i class="fab fa-instagram text-gray-300 hover:text-gray-200 transition-colors duration-300 text-xl"></i>
+
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
